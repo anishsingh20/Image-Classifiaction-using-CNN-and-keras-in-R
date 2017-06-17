@@ -5,14 +5,14 @@
     The usual method for training a network to perform N-way classification is multinomial logistic regression, aka. softmax regression. Softmax regression applies a softmax nonlinearity to the output of the network and calculates the cross-entropy between the normalized predictions and a 1-hot encoding of the label. For regularization, we also apply the usual weight decay losses to all learned variables. The objective function for the model is the sum of the cross entropy loss and all these weight decay terms, as returned by the loss() function.
 
 ## Dependencies ## 
-    devtools::install_github('rstudio/keras')
+    >_devtools::install_github('rstudio/keras')_
 
  
-    library(reticulate) #interface for Python in R
+    >_library(reticulate) #interface for Python in R_
  
-    library(tensorflow) #For all computations running in the backend on CPU\
- 
-    library(keras)
+    >_library(tensorflow) #For all computations running in the backend on CPU_
+
+    >_library(keras)_
  
  
  ## Model Architecture 
