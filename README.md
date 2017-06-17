@@ -43,3 +43,10 @@ Pool1  | Max pooling layer
 Local1 | Fully Connected layer with ReLu activation with 512 units
 Output1| Output layer with 10 Units
 Softmax_Linear| Linear transformation to the outputs to compute Probabilities 
+
+
+
+
+# Model's Output
+
+![GitHub Logo](https://cdn-images-1.medium.com/max/600/1*79_O02dXeOMP2bHuGYFKUQ.gif)
