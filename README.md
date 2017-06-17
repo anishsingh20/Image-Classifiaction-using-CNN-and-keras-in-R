@@ -49,4 +49,12 @@ Softmax_Linear| Linear transformation to the outputs to compute Probabilities
 
 # Model's Output
 
-![GitHub Logo](https://cdn-images-1.medium.com/max/600/1*79_O02dXeOMP2bHuGYFKUQ.gif)
+![GitHub Logo](https://thkimorgblog.files.wordpress.com/2016/03/e18489e185b3e1848fe185b3e18485e185b5e186abe18489e185a3e186ba-2016-03-12-e1848be185a9e1848ce185a5e186ab-1-02-16.png?w=764)
+
+
+
+### Plot of Accuracy Vs Epochs(no of iterations over the Training dataset)
+
+
+![GitHub Logo](http://imagine.enpc.fr/~zagoruys/cifar.png)
+
