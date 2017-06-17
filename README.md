@@ -1,8 +1,16 @@
 # Image-Classifiaction #
-	The 10 classes are airplane, automobile, bird, cat, deer, dog, frog, horse, ship, and truck.
+    I have build a CNN network for classifying the images in R. 
+    The 10 classes are airplane, automobile, bird, cat, deer, dog, frog, horse, ship, and truck.
+    The usual method for training a network to perform N-way classification is multinomial logistic regression, aka. softmax regression. Softmax regression applies a softmax nonlinearity to the output of the network and calculates the cross-entropy between the normalized predictions and a 1-hot encoding of the label. For regularization, we also apply the usual weight decay losses to all learned variables. The objective function for the model is the sum of the cross entropy loss and all these weight decay terms, as returned by the loss() function.
 
-
-## Model Architecture 
+## Dependencies ## 
+ devtools::install_github('rstudio/keras')
+ library(reticulate) #interface for Python in R
+ library(tensorflow)
+ library(keras)
+ 
+ 
+ ## Model Architecture 
 
 
 #### Overview
