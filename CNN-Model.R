@@ -59,10 +59,75 @@ model %>%
 #Optimizer -rmsProp to do parameter updates 
 opt <- optimizer_rmsprop(lr = 0.0001, decay = 1e-6)
 
-
+#Compiling the Model
 model %>% compile(
   loss = "categorical_crossentropy",
   optimizer = opt,
   metrics = "accuracy"
 )
+
+#Summary of the Model and its Architecture
+summary(model)
+
+
+
+#TRAINING PROCESS OF THE MODEL
+data_augmentation <- TRUE
+
+
+if(!data_augmentation) {
+  model %>% fit(
+    train_x,train_y ,batch_size=32,epochs=5,
+    validation_data = list(test_x, test_y),
+    shuffle=TRUE
+  )
+  
+} else {
+  #Generating images
+  datagen <- image_data_generator(
+    featurewise_center = TRUE,
+    featurewise_std_normalization = TRUE,
+    rotation_range = 20,
+    width_shift_range = 0.30,
+    height_shift_range = 0.30,
+    horizontal_flip = TRUE
+  )
+  #Fit image data generator internal statistics to some sample data
+  
+  datagen %>% fit_image_data_generator(train_x)
+  #Generates batches of augmented/normalized data from image data and labels
+  model %>% fit_generator(
+    flow_images_from_data(train_x, train_y, datagen, batch_size = 32,
+                          save_to_dir="F:/PROJECTS/CNNcifarimages/"),
+    steps_per_epoch=as.integer(50000/32), #no of training samples/batch size
+    epochs = 5,
+    validation_data = list(test_x, test_y)
+    
+    
+  )
+  
+  
+}
+
+#after training
+#loss: 1.5014 - acc: 0.4529 - val_loss: 2.7578 - val_acc: 0.1665 for 5 epochs( ie iterating 5 times over dataset)
+
+
+
+
+#Model to yaml
+
+yaml<-model_to_yaml(model)
+class(yaml)
+
+#saving to JSON
+json<-model_to_json(model)
+json
+
+#saving the Model's architecture
+save_model_hdf5(model,filepath = "F:/PROJECTS/Image-Classification", overwrite = TRUE,
+                include_optimizer = TRUE)
+
+load_model_hdf5(filepath = "F:/PROJECTS/Image-Classification",compile = T)
+
 
