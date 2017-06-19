@@ -53,7 +53,9 @@ Softmax_Linear| Linear transformation to the outputs to compute Probabilities
 
 
 
-### Plot of Accuracy Vs Epochs(no of iterations over the Training dataset)
+
+
+### Plot of Epochs(no of iterations over the Training dataset) vs Accuracy Of the Model 
 
 
 ![GitHub Logo](http://imagine.enpc.fr/~zagoruys/cifar.png)
