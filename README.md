@@ -4,7 +4,7 @@
    The 10 classes are airplane, automobile, bird, cat, deer, dog, frog, horse, ship, and truck.
    The usual method for training a network to perform N-way classification is multinomial logistic regression, aka. softmax regression. 
     
- __Softmax__ activation is used at the end which applies a softmax nonlinearity to the output of the network and calculates the __cross-entropy__ loss between the probabilities calculated using the softmax activation function. For regularization, we also apply the usual weight decay losses to all learned variables.
+ __Softmax__ activation is used at the *end* which applies a softmax nonlinearity to the output of the network and calculates the __cross-entropy__ loss between the probabilities calculated using the softmax activation function. For regularization, we also apply the usual weight decay losses to all learned variables.
     
 The softmax function is a generalization of __logistic(sigmoid)__ function which is used to compute the probabilites of the real valued predictions at the end of fully connected dense layer and then use those probability values to compute loss(error) values. Below is the softmax activation function.
     
