@@ -1,5 +1,5 @@
 # Image-Classifiaction 
-   I have build a dense CNN network for classifying the images in R into 10 classes. 
+   I have build a deep CNN network for classifying the images in R into 10 classes. 
     
    The 10 classes are airplane, automobile, bird, cat, deer, dog, frog, horse, ship, and truck.
    The usual method for training a network to perform N-way classification is multinomial logistic regression, aka. softmax regression. 
